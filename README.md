@@ -26,7 +26,7 @@ Click "Download" to automatically start downloading Raspberry Pi OS Image.
 
 |Raspberry Pi OS|framos-libcamera branch|
 |-|-|
-|[Raspberry Pi OS (64-bit) 2024-11-19](https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-11-19/) [[Download]](https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-11-19/2024-11-19-raspios-bookworm-arm64.img.xz)|framos_v0.3.2+rpt20240927|
+|[Raspberry Pi OS (64-bit) 2024-11-19](https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-11-19/) [[Download]](https://downloads.raspberrypi.com/raspios_arm64/images/raspios_arm64-2024-11-19/2024-11-19-raspios-bookworm-arm64.img.xz)|6.6.51|framos_v0.3.2+rpt20240927|
 
 
 # Short procedure
