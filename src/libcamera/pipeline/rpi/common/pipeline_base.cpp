@@ -246,7 +246,14 @@ CameraConfiguration::Status RPiCameraConfiguration::validate()
 		 */
 
 		BayerFormat cfgBayer = BayerFormat::fromPixelFormat(rawStream->pixelFormat);
-		cfgBayer.order = data_->sensor_->bayerOrder(combinedTransform_);
+		/*
+		 * Some sensors (e.g. IMX900) use a different Bayer order for
+		 * different modes (binned vs full-res), which breaks the
+		 * single-native-order assumption of sensor_->bayerOrder().
+		 * Derive the order from the actually-selected sensor mode so
+		 * it matches the CFE source pad and link validation passes.
+		 */
+		cfgBayer.order = BayerFormat::fromMbusCode(sensorFormat_.code).order;
 
 		if (rawStream->pixelFormat != cfgBayer.toPixelFormat()) {
 			rawStream->pixelFormat = cfgBayer.toPixelFormat();
